@@ -1,1 +1,8 @@
 discord.py
+aiohttp
+websockets
+chardet
+SimpleEconomy
+pymongo
+dnspython
+pystun3
