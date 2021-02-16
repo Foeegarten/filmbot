@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix='!', intents=intents)
 async def add(ctx,*,content:str):
     rec_films.append(content)
     print(rec_films)
-    await ctx.send('Добавлено!')
+    await ctx.send('Г„Г®ГЎГ ГўГ«ГҐГ­Г®!')
 @client.command()
 async def wat(ctx,*,content:str):
     if content in rec_films:
@@ -20,9 +20,9 @@ async def wat(ctx,*,content:str):
         w_films.append(content)
         print(rec_films)
         print(w_films)
-        await ctx.send("Перемещено")
+        await ctx.send("ГЏГҐГ°ГҐГ¬ГҐГ№ГҐГ­Г®")
     else:
-        await ctx.send("Такого фильма нету в списке")
+        await ctx.send("Г’Г ГЄГ®ГЈГ® ГґГЁГ«ГјГ¬Г  Г­ГҐГІГі Гў Г±ГЇГЁГ±ГЄГҐ")
 @client.command()
 async def spisok_r(ctx):
     await ctx.send(str(rec_films))
@@ -33,4 +33,4 @@ async def spisok_w(ctx):
 async def recommend(ctx):
     await ctx.send(random.choice(rec_films))
 token = os.environ.get('BOT_TOKEN')
-client.run(str(token))
+client.run(token)
